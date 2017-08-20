@@ -4,6 +4,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
 import { FIREBASE_CREDENTIALS } from './firebase.credentials';
 
 import { MyApp } from './app.component';
@@ -20,7 +22,9 @@ import { AddShoppingPage } from '../pages/add-shopping/add-shopping';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     //Initalize angularfire with credentials from dashboard
-    AngularFireModule.initializeApp(FIREBASE_CREDENTIALS)
+    AngularFireModule.initializeApp(FIREBASE_CREDENTIALS),
+    //Import the AngularFireDatabaseModule to use database Interactions
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
