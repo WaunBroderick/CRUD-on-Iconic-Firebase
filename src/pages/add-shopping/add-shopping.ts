@@ -35,11 +35,21 @@ export class AddShoppingPage {
   }
 
  addShoppingItem(shoppingItem: ShoppingItem){
-   
+  /* 
+    Create a new anonymous object and convert itemNUmber to a number
+    Push this to our firebase  under the 'shopping-list' node
+  */
   this.shoppingItemRef$.push({
     itemName: this.shoppingItem.itemName,
     itemNumber: Number(this.shoppingItem.itemNumber)
   });
+      
+
+      //Reset our ShoppingList
+      this.shoppingItem = {} as ShoppingItem;
+
+      //Navigate the user back to the ShoppingListPage
+      this.navCtrl.pop();
  }
 
 }
