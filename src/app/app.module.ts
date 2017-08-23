@@ -8,6 +8,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { FIREBASE_CREDENTIALS } from './firebase.credentials';
 
+
 import { MyApp } from './app.component';
 import { ShoppingListPage } from '../pages/shopping-list/shopping-list';
 import { AddShoppingPage } from '../pages/add-shopping/add-shopping';

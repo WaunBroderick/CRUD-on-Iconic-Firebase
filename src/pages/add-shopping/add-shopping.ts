@@ -17,21 +17,8 @@ export class AddShoppingPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private database: AngularFireDatabase) {
    this.shoppingItemRef$ = this.database.list('shopping-list');
-
-  /*
-    shopping-list:
-      0:
-        itemName:
-        itemNumer:
-
-      1:
-
-
-
-  */
   
-  
-  
+
   }
 
  addShoppingItem(shoppingItem: ShoppingItem){
